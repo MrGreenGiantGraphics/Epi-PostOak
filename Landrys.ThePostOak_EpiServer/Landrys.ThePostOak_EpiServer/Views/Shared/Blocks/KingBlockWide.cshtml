@@ -1,0 +1,56 @@
+﻿@model KindImageBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+
+<div class="container">
+    <section id="block-kind-block-top">@using (Html.BeginConditionalLink(!ContentReference.IsNullOrEmpty(Model.Link) && !(ViewContext.Controller is PreviewController), Url.PageLinkUrl(Model.Link), Model.Text))
+    {
+        <div class="col-md-6 kind-text-image" @Html.EditAttributes(i => i.ImageA)>
+
+            @if (Model.ImageA != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageA)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+
+            <div id="kind-text-holder">
+                <div class="kind-text-01">
+                    <span @Html.EditAttributes(x => x.Text)>@Model.Text</span>
+                </div>
+            </div>
+        </div>
+    }
+    </section>
+    <section id="block-kind-block-bot">
+        <div class="col-md-6">
+            <div id="kind-image-holder-top">
+                <div class="col-md-6" @Html.EditAttributes(i => i.ImageB)>
+
+                    @if (Model.ImageB != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageB)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+                    }
+                </div>
+                <div class="col-md-6" @Html.EditAttributes(i => i.ImageC)>
+                    @if (Model.ImageC != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageC)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+                    }
+                </div>
+            </div>
+            <div id="kind-image-holder-bot">
+                <div class="col-md-6" @Html.EditAttributes(i => i.ImageD)>
+                    @if (Model.ImageD != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageD)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+                    }
+                </div>
+                <div class="col-md-6" @Html.EditAttributes(i => i.ImageE)>
+                    @if (Model.ImageE != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageE)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+ </div>

@@ -1,0 +1,101 @@
+﻿@using Landrys.ThePostOak_EpiServer
+@using EPiServer.Framework.Web.Mvc.Html
+@model PageViewModel<Landrys.ThePostOak_EpiServer.Models.Pages.StartPage>
+@{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
+    <div class="hero">  <!-- Hero Area -->
+        <div class="diamonds">
+            <section id="logo" @Html.EditAttributes(x => x.CurrentPage.ImagePoTop)>
+            <span><img src="@Url.ContentUrl(Model.CurrentPage.ImagePoTop)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span></section>
+            <section id="top-nav-bar"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoNav, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+            <section id="top-content"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoCon, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+            <div class="scroll">
+                <small>Start scrolling</small><br />
+                <center><img src="~/Static/img/arrow-down.png" alt="Click to go to the next section" /></center><!-- js one page scroll script -->
+            </div>
+        </div>
+    </div>
+    <hr class="hr-bar" />
+    <div class="pattern"> <!-- Post Oak Area -->
+        <hr class="hr-diamonds" />
+        <section id="top-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder01, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        <hr class="hr-solid" />
+        <section id="top-content-02"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder02, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        <center><a class="btn bg-light">request info</a><a class="btn bg-dark">email sign-up</a></center>
+    </div>
+    <div class="home-3"> <!--Work Of Art Area -->
+        <div class="overlay">
+            <section id="top-content-03"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder03, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+            <section id="mid-art-lightbox" class="col-md-12">
+                @{ Html.RenderPartial("lightbox", Model); }
+            </section>
+        </div>
+    </div>
+    <div class="home-4"> <!--Sophisticated Area -->
+        <div class="overlay content-box-horz">
+            <div class="content-border">
+                <section id="mid-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder04, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+            </div>
+        </div>
+    </div>
+    <div id="One-Of-A-Kind-block"> <!--One-Of-A-Kind Area -->
+        <div class="promo-right left">
+            <div class="left">
+                <section id="bot-image-01" @Html.EditAttributes(x => x.CurrentPage.ImageBottom01)>
+                    <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom01)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+                </section>
+                <section id="bot-image-02" @Html.EditAttributes(x => x.CurrentPage.ImageBottom02)>
+                    <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom02)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+                </section>
+            </div>
+            <div class="left">
+                <section id="bot-image-03" @Html.EditAttributes(x => x.CurrentPage.ImageBottom03)>
+                    <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom03)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+                </section>
+                <section id="bot-image-04" @Html.EditAttributes(x => x.CurrentPage.ImageBottom04)>
+                    <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom04)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+                </section>
+            </div>
+        </div>
+   </div>
+    <div id="development-area-block"> <!--The Development Area -->
+        <div>
+            <section id="bot-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder06, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        </div>
+        <div>
+            <section id="bot-image-05" @Html.EditAttributes(x => x.CurrentPage.ImageBottom05)>
+                <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom05)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+
+            </section>
+            <section id="bot-image-06" @Html.EditAttributes(x => x.CurrentPage.ImageBottom06)>
+                <span><img src="@Url.ContentUrl(Model.CurrentPage.ImageBottom06)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+            </section>
+        </div>
+    </div>
+<div class="hospitality-bar"><!--The Footer Area -->
+    hospitality bar
+    <center>
+        <section id="fot-hospitality-01" class="col-md-12">
+            @{ Html.RenderPartial("Footernav", Model); }
+        </section>
+    </center>
+</div>
+<div id="fot-content-area">
+    <center>
+        <footer>
+            <section id="fot-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })</span></section>
+        </footer>
+    </center>
+    <center>
+        <footer>
+            <section id="fot-content-02"><span>@Html.PropertyFor(x => x.CurrentPage.MainBodyContent, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        </footer>
+    </center>
+</div>
+<div class="lg-promo left">
+    Place Background Image Here
+    <section id="mid-content-02"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder05, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+</div>
+
+@*<section id="mid-kind-01">
+    <span>@Html.PropertyFor(x => x.CurrentPage.MainContentKind, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })</span>
+</section>*@
