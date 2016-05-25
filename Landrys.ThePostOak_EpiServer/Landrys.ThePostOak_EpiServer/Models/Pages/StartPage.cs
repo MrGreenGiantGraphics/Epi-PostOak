@@ -19,7 +19,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Pages
         Include = new[] { typeof(ContentFolder)},
         // Pages we can create under the start page...
         ExcludeOn = new[] { typeof(ContentFolder)})]
-    //eath those we can't create additional start pages
+    // those we can't create additional start pages
     public class StartPage : SitePageData
     {
 

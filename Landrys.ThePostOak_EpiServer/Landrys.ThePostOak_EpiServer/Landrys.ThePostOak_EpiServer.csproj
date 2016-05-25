@@ -304,6 +304,7 @@
     <Compile Include="Models\Media\VideoFile.cs" />
     <Compile Include="Models\Pages\ContactPage.cs" />
     <Compile Include="Models\Pages\ContainerPage.cs" />
+    <Compile Include="Models\Pages\ResortPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Properties\PropertyStringList.cs" />
@@ -600,6 +601,7 @@
     <Content Include="Views\Shared\Blocks\TeaserBlock.cshtml" />
     <Content Include="Views\Shared\Blocks\KingBlockWide.cshtml" />
     <Content Include="Views\resort\index.cshtml" />
+    <Content Include="Views\ResortPage\Index.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
       <SubType>Designer</SubType>
