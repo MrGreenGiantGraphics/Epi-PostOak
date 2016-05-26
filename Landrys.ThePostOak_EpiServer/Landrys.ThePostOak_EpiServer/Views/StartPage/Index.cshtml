@@ -4,24 +4,10 @@
 
 
 @{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
-    @*<div class="hero">  <!-- Hero Area -->
-        <div class="diamonds">
-            <section id="logo" @Html.EditAttributes(x => x.CurrentPage.ImagePoTop)>
-            <span><img src="@Url.ContentUrl(Model.CurrentPage.ImagePoTop)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span></section>
-            <section id="top-nav-bar"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoNav, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
-            <section id="top-content"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoCon, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
-            <div class="scroll">
-                <small>Start scrolling</small><br />
-                <center><img src="~/Static/img/arrow-down.png" alt="Click to go to the next section" /></center><!-- js one page scroll script -->
-            </div>
-        </div>
-    </div>*@
 <div id="hero-container">
     <!-- Place Background Bottom Image -->
-    <img alt="Landry's, Inc. multi-brand dining, hospitality, entertainment and gaming corporation" src="~/Static/img/home/hero-1.jpg" id="bg" />
     <div id="diamonds-container">
         <!-- Place Background Top Image -->
-        <img alt="Landry's, Inc. multi-brand dining, hospitality, entertainment and gaming corporation" src="~/Static/img/home/diamonds.png" id="bg-top" />
         <section id="logo" @Html.EditAttributes(x => x.CurrentPage.ImagePoTop)>
             <!-- Place CMS Content -->
             <span><img src="@Url.ContentUrl(Model.CurrentPage.ImagePoTop)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
@@ -35,14 +21,19 @@
         </div>
     </div>
 </div>
-    <hr class="hr-bar" />
-    <div class="pattern"> <!-- Post Oak Area -->
+<hr class="hr-bar" />
+<div id="pattern-container">
+    <div id="pattern-content">
+        <!-- Post Oak Area -->
         <hr class="hr-diamonds" />
         <section id="top-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder01, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
         <hr class="hr-solid" />
         <section id="top-content-02"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder02, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
         <center><a class="btn bg-light">request info</a><a class="btn bg-dark">email sign-up</a></center>
-    </div>
+    </div>   
+</div>
+
+
     <div class="home-3"> <!--Work Of Art Area -->
         <div class="overlay">
             <section id="top-content-03"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder03, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
