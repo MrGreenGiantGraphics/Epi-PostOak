@@ -497,8 +497,10 @@
     <Content Include="Static\css\instagram.jpg" />
     <Content Include="Static\css\Pintrest.png" />
     <Content Include="Static\css\twitter.png" />
+    <Content Include="Static\img\home\conference-entry.jpg" />
     <Content Include="Static\img\home\diamonds-container.png" />
     <Content Include="Static\img\home\hero-container.jpg" />
+    <Content Include="Static\img\home\patterned-container.jpg" />
     <Content Include="Static\img\logos\BWI.png" />
     <Content Include="Static\img\logos\GN.png" />
     <Content Include="Static\img\logos\HI.png" />

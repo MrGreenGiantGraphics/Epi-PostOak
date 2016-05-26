@@ -33,8 +33,7 @@
     </div>   
 </div>
 
-
-    <div class="home-3"> <!--Work Of Art Area -->
+<div id="home-3"> <!--Work Of Art Area -->
         <div class="overlay">
             <section id="top-content-03"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder03, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
             <section id="mid-art-lightbox" class="col-md-12">
@@ -42,14 +41,16 @@
             </section>
         </div>
     </div>
-    <div class="home-4"> <!--Sophisticated Area -->
+
+<div id="home-4"> <!--Sophisticated Area -->
         <div class="overlay content-box-horz">
             <div class="content-border">
                 <section id="mid-content-01"><span>@Html.PropertyFor(x => x.CurrentPage.ContentHolder04, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
             </div>
         </div>
     </div>
-    <div id="One-Of-A-Kind-block"> <!--One-Of-A-Kind Area -->
+
+<div id="One-Of-A-Kind-block"> <!--One-Of-A-Kind Area -->
         <div class="promo-right left">
             <div class="left">
                 <section id="bot-image-01" @Html.EditAttributes(x => x.CurrentPage.ImageBottom01)>

@@ -103,9 +103,6 @@ html, body {
     background-color: transparent;
 
 }
-
-
-
 #top-content-01 h2 {
     color:#000;
     margin-bottom:15px;
@@ -115,6 +112,44 @@ html, body {
     text-align:center;
     line-height:40px;
     margin-bottom:80px;
+}
+
+#home-3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -200;
+    min-width: 1280px;
+    min-height: 720px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/home/entry-container.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/home/entry-container.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/home/entry-container.jpg', sizingMethod='scale')";
+}
+
+#home-4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -200;
+    min-width: 1280px;
+    min-height: 720px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/home/patterned-container.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/home/patterned-container.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/home/patterned-container.jpg', sizingMethod='scale')";
 }
 
 
@@ -583,9 +618,28 @@ footer {
     height: auto;
 }
 
+
+#hero-container {
+    width: 100%;
+    height: auto;
 }
 
- End css for responsive design 
+#diamonds-container {
+    width: 100%;
+    height: auto;
+}
+#pattern-container {
+    width: 100%;
+    height: auto;
+}
+#pattern-content {
+    width: 100%;
+    height: auto;
+}
+
+}
+
+ /*End css for responsive design*/ 
 
 
 
