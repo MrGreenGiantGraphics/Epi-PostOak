@@ -4,7 +4,7 @@
 
 
 @{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
-    <div class="hero">  <!-- Hero Area -->
+    @*<div class="hero">  <!-- Hero Area -->
         <div class="diamonds">
             <section id="logo" @Html.EditAttributes(x => x.CurrentPage.ImagePoTop)>
             <span><img src="@Url.ContentUrl(Model.CurrentPage.ImagePoTop)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span></section>
@@ -15,7 +15,26 @@
                 <center><img src="~/Static/img/arrow-down.png" alt="Click to go to the next section" /></center><!-- js one page scroll script -->
             </div>
         </div>
+    </div>*@
+<div id="hero-container">
+    <!-- Place Background Bottom Image -->
+    <img alt="Landry's, Inc. multi-brand dining, hospitality, entertainment and gaming corporation" src="~/Static/img/home/hero-1.jpg" id="bg" />
+    <div id="diamonds-container">
+        <!-- Place Background Top Image -->
+        <img alt="Landry's, Inc. multi-brand dining, hospitality, entertainment and gaming corporation" src="~/Static/img/home/diamonds.png" id="bg-top" />
+        <section id="logo" @Html.EditAttributes(x => x.CurrentPage.ImagePoTop)>
+            <!-- Place CMS Content -->
+            <span><img src="@Url.ContentUrl(Model.CurrentPage.ImagePoTop)" class="img-responsive" alt="The Post Oak - Landry's inc." /></span>
+        </section>
+        <section id="top-nav-bar"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoNav, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        <section id="top-content"><span>@Html.PropertyFor(x => x.CurrentPage.TextPoCon, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</span></section>
+        <div class="scroll">
+            <!-- Place Scroll Image -->
+            <small>Start scrolling</small><br />
+            <center><img src="~/Static/img/arrow-down.png" alt="Click to go to the next section" /></center>
+        </div>
     </div>
+</div>
     <hr class="hr-bar" />
     <div class="pattern"> <!-- Post Oak Area -->
         <hr class="hr-diamonds" />
